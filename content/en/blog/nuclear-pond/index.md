@@ -139,7 +139,7 @@ $ nuclearpond run -t devsecopsdocs.com -a $(echo -ne "-t dns -silent" | base64) 
 
 ### Command Line Output
 
-Think of this mechanism as a way to run the CLI directly on the cloud. This allows you to specify
+Think of this mechanism as a way to run the CLI directly on the cloud. All you have to do is specify the `-o` flag with `cmd` and you are launching Nuclei just as you would locally. 
 
 ```log
 $ nuclearpond run -t devsecopsdocs.com -a $(echo -ne "-t dns -silent" | base64) -o cmd
