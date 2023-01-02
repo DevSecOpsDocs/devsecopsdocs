@@ -27,13 +27,6 @@ npm install
 npm run start
 ```
 
-### Analytics
-
-```
-<script defer data-domain="devsecopsdocs.com" src="https://plausible.io/js/script.js"></script>
-```
-
-
 ## Credit
 
 - [Hugo](https://gohugo.io/documentation/)
