@@ -15,7 +15,7 @@ homepage: false
 
 When new security research is out, the spin up time to scour assets for vulnerabilities can be a long and tedious task. Spending time learning about the latest findings, how to exploit them, and what conditions are required in order to exploit them. How can you stay on top of it all when it is a constant battle repeating itself? 
 
-That is the exact problem projects like [Nuclei](https://github.com/projectdiscovery/nuclei) are made for; To help researchers identify known issues through a powerful templating language to ensure you not miss out. It can also help you identify issues such as known subdomain takeovers, exposed panels, network services, misconfigurations, exposed files, and the list goes on. 
+That is the exact problem projects like [Nuclei](https://github.com/projectdiscovery/nuclei) are made for; To help researchers identify known issues through a powerful templating language to ensure you do not miss out. It can also help you identify issues such as known subdomain takeovers, exposed panels, network services, misconfigurations, exposed files, and the list goes on. 
 
 It does an outstanding job when you have a limited number of assets and are performing scans individually. Though the moment you have hundreds or thousands of assets, scaling vertically is no longer an option. 
 
