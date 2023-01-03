@@ -97,7 +97,7 @@ $ nuclei -u https://jsdkjfskjsfdkdjfds.s3.amazonaws.com/ -tags takeover
 [aws-bucket-takeover] [http] [high] https://jsdkjfskjsfdkdjfds.s3.amazonaws.com/
 ```
 
-## Nuclear PondUsage
+## Nuclear Pond Usage
 
 Think of Nuclear Pond as just a way for you to run Nuclei in the cloud. You can use it just as you would on your local machine but run them in parallel and with however many hosts you want to specify. All you need to think of is the nuclei command line flags you wish to pass to it. 
 
@@ -111,7 +111,7 @@ $ go install github.com/DevSecOpsDocs/Nuclear-Pond@latest
 
 #### Command line flags
 
-In order to specify the command line flags it's important to encode them as base64. When doing so it will send that off to the backend and run directly on nuclei. Any flags available in the current version should be available outside of `-o` and `-json`. 
+Some of the most important flags with Nuclear Pond include `-b` which commands how many hosts per invocation(number of hosts / batches = nuclei lambda invocations). The `-o` flag allows you to specify outputs such as `cmd` for the output of Nuclei and `s3` for data lake analysis of findings. I would recommend running it as `-o cmd` to get the feel of how the tool works. The `-c` flag allows you to specify how many threads to invoke lambda, it's default is set to `1` which is slow avoid invoking hundreds of lambda functions by mistake. Any flags available in the current version should be available outside of `-o` and `-json`, these are reserved for the runner. 
 
 ```
 $(echo -ne "-t dns" | base64)
