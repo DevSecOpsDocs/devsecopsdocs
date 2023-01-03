@@ -183,26 +183,6 @@ $ nuclearpond run -t devsecopsdocs.com -a $(echo -ne "-t dns -silent" | base64) 
 2023/01/03 10:22:13 Completed all parallel operations in 1.165510457s , best of luck!
 ```
 
-### Command Line Output
-
-Think of this mechanism as a way to run the CLI directly on the cloud. All you have to do is specify the `-o` flag with `cmd` and you are launching Nuclei just as you would locally. 
-
-```log
-$ nuclearpond run -t devsecopsdocs.com -a $(echo -ne "-t dns -silent" | base64) -o s3
-  _   _                  _                           ____                        _
- | \ | |  _   _    ___  | |   ___    __ _   _ __    |  _ \    ___    _ __     __| |
- |  \| | | | | |  / __| | |  / _ \  / _` | | '__|   | |_) |  / _ \  | '_ \   / _` |
- | |\  | | |_| | | (__  | | |  __/ | (_| | | |      |  __/  | (_) | | | | | | (_| |
- |_| \_|  \__,_|  \___| |_|  \___|  \__,_| |_|      |_|      \___/  |_| |_|  \__,_|
-
-                                                                  devsecopsdocs.com
-
-2023/01/03 10:22:12 Running nuclei against the target devsecopsdocs.com
-2023/01/03 10:22:12 Running with 1 threads
-2023/01/03 10:22:13 Saved results in s3://test-nuclei-runner-artifacts/findings/2023/01/03/18/nuclei-findings-cd17c344-ec06-48da-96d6-728debf01c57.json
-2023/01/03 10:22:13 Completed all parallel operations in 1.165510457s , best of luck!
-```
-
 ### Scanning at Scale
 
 Now lets run Nuclear Pond as it was intended to do, at scale on a significant amount of targets. Here I have around 500k targets, decided to batch 2k targets per execution with `-b 2000`, and run 200 individual threads locally with `-c 200` to run lambda functions asynchronously. 
